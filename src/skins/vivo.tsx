@@ -205,7 +205,7 @@ export const getVivoSkin: GetKnownSkin = () => {
             buttonLinkDangerBackgroundInverseSelected: applyAlpha(palette.white, 0.08),
             buttonLinkBackgroundSelected: applyAlpha(palette.white, 0.08),
             buttonLinkBackgroundInverseSelected: applyAlpha(palette.white, 0.08),
-            buttonPrimaryBackground: palette.vivoPurpleLight80,
+            buttonPrimaryBackground: palette.vivoPurple,
             buttonPrimaryBackgroundInverse: palette.vivoPurpleLight80,
             buttonPrimaryBackgroundSelected: palette.vivoPurpleDark,
             buttonPrimaryBackgroundHover: palette.vivoPurpleDark,

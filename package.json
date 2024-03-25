@@ -1,5 +1,5 @@
 {
-    "name": "@telefonica/mistica",
+    "name": "telefonica-lib",
     "version": "14.47.0",
     "license": "MIT",
     "repository": {
@@ -26,7 +26,6 @@
         "build": "yarn clean && node scripts/build.js",
         "compile": "node scripts/compile.js",
         "clean": "rimraf dist && rimraf dist-es && rimraf dist-ts && rimraf css/mistica.css && rimraf community.d.ts && rimraf community.js && rimraf node_modules/.cache",
-        "prepublishOnly": "node scripts/prepublish-only.js",
         "prepack": "yarn build",
         "storybook": "storybook dev -p 6006",
         "storybook-for-acceptance-tests": "cross-env NODE_ENV=production yarn storybook --ci 2>&1",
@@ -141,7 +140,8 @@
         "swc-loader": "^0.2.3",
         "typescript": "^4.6.3",
         "vite": "^4.5.0",
-        "vite-plugin-no-bundle": "^2.0.3"
+        "vite-plugin-no-bundle": "^2.0.3",
+        "yarn": "^1.22.22"
     },
     "dependencies": {
         "@juggle/resize-observer": "^3.3.1",
@@ -202,7 +202,7 @@
         "@types/react-dom": "^18.0.10",
         "@testing-library/dom": "^8.19.1"
     },
-    "packageManager": "yarn@3.6.1",
+    "packageManager": "yarn@1.22.22",
     "workspaces": [
         "packages/eslint-plugin-mistica-local-rules"
     ],
