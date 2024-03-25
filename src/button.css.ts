@@ -37,6 +37,8 @@ const button = style([
         padding: 0,
     }),
     {
+        fontFamily: 'Roboto',
+        fontWeight: 500,
         border: `${BORDER_PX}px solid transparent`,
         minWidth: BUTTON_MIN_WIDTH,
         transition: `background-color ${colorTransitionTiming}, color ${colorTransitionTiming}, border-color ${colorTransitionTiming}`,

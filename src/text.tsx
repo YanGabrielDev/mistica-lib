@@ -134,6 +134,7 @@ export const Text: React.FC<TextProps> = ({
                 WebkitHyphens: hyphens,
                 letterSpacing,
                 fontWeight: weight ? mapToWeight[weight] : 'inherit',
+                fontFamily: 'Roboto',
                 textTransform: transform || 'inherit',
                 textDecoration: decoration ?? 'inherit',
                 overflowWrap: wordBreak ? 'anywhere' : 'inherit',
