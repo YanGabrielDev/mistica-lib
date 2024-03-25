@@ -1,0 +1,23 @@
+import * as React from 'react';
+import type Image from './image';
+import type Video from './video';
+import type { ButtonLink, ButtonPrimary } from './button';
+import type Tag from './tag';
+import type { DataAttributes, RendersElement, RendersNullableElement } from './utils/types';
+type HeroProps = {
+    height?: string;
+    background?: 'default' | 'alternative' | 'brand' | 'brand-secondary';
+    media: RendersElement<typeof Image> | RendersElement<typeof Video>;
+    headline?: RendersNullableElement<typeof Tag>;
+    pretitle?: string;
+    title?: string;
+    description?: string;
+    descriptionLinesMax?: number;
+    extra?: React.ReactNode;
+    button?: RendersNullableElement<typeof ButtonPrimary>;
+    buttonLink?: RendersNullableElement<typeof ButtonLink>;
+    dataAttributes?: DataAttributes;
+    desktopMediaPosition?: 'left' | 'right';
+};
+declare const Hero: React.ForwardRefExoticComponent<HeroProps & React.RefAttributes<HTMLDivElement>>;
+export default Hero;

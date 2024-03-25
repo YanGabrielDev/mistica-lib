@@ -1,0 +1,56 @@
+import type { GetKnownSkin } from './types';
+export declare const palette: {
+    readonly o2Blue: "#032B5A";
+    readonly o2Blue10: "#E6EAEE";
+    readonly o2Blue30: "#8195AC";
+    readonly o2Blue45: "#6C8BAF";
+    readonly o2Blue55: "#04264E";
+    readonly o2SkyBlue: "#0090D0";
+    readonly o2SkyBlue55: "#057DB2";
+    readonly o2SkyBlueLight: "#65B4E4";
+    readonly o2SkyBlueLight45: "#80C7E7";
+    readonly o2SkyBlueLight20: "#D0E8F6";
+    readonly o2SkyBlueLight10: "#E9F5FB";
+    readonly o2DeepSkyBlue: "#7FD4FE";
+    readonly o2Gem: "#01B7B4";
+    readonly o2GemDark: "#099E9B";
+    readonly o2GemLight30: "#99E2E1";
+    readonly o2Yellow: "#FFCC00";
+    readonly o2Green: "#84B50F";
+    readonly o2Green10: "#F3F8E7";
+    readonly o2Green40: "#A9CB57";
+    readonly o2Green75: "#4D621D";
+    readonly pepper: "#FF374A";
+    readonly pepper10: "#FFEBED";
+    readonly pepper20: "#FFC3C8";
+    readonly pepper40: "#FF7380";
+    readonly pepper55: "#D73241";
+    readonly pepper70: "#B22634";
+    readonly orange: "#FF7F41";
+    readonly orange10: "#FFF2EC";
+    readonly orange40: "#FFA57A";
+    readonly orange80: "#73391D";
+    readonly coral: "#FF706E";
+    readonly pink: "#EB3C7D";
+    readonly pink10: "#FDEBF2";
+    readonly pink40: "#F59DBE";
+    readonly pink60: "#BC3064";
+    readonly o2GradientFirst: "#102550";
+    readonly o2GradientSecond: "#0B4680";
+    readonly o2GradientThird: "#0D71AD";
+    readonly o2GradientFourth: "#449ED0";
+    readonly grey1: "#F6F6F6";
+    readonly grey2: "#EEEEEE";
+    readonly grey3: "#DDDDDD";
+    readonly grey4: "#999999";
+    readonly grey5: "#757575";
+    readonly grey6: "#000033";
+    readonly white: "#FFFFFF";
+    readonly darkModeBlack: "#191919";
+    readonly darkModeGrey: "#242424";
+    readonly darkModeGrey6: "#313235";
+};
+/**
+ * @deprecated use `getO2Skin` instead
+ */
+export declare const getO2ClassicSkin: GetKnownSkin;
