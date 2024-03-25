@@ -175,7 +175,7 @@ export const getVivoSkin: GetKnownSkin = () => {
             backgroundAlternative: palette.darkModeBlack,
             backgroundBrand: palette.darkModeBlack,
             backgroundBrandSecondary: palette.darkModeBlack,
-            backgroundContainer: palette.darkModeGrey,
+            backgroundContainer: palette.white,
             backgroundContainerHover: applyAlpha(palette.white, 0.03),
             backgroundContainerPressed: applyAlpha(palette.white, 0.05),
             backgroundContainerBrand: palette.darkModeGrey,
