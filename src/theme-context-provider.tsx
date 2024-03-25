@@ -88,7 +88,7 @@ const ThemeContextProvider: React.FC<Props> = ({theme, children, as}) => {
     const lightColors: Colors = theme.skin.colors;
     const darkColors: Colors = {...theme.skin.colors, ...theme.skin.darkModeColors};
     const isDarkModeEnabled = (colorScheme === 'auto' && isOsDarkModeEnabled) || colorScheme === 'dark';
-    const colors: Colors = isDarkModeEnabled ? darkColors : lightColors;
+    const colors: Colors = lightColors;
 
     const contextTheme = React.useMemo<Theme>(() => {
         const platformOverrides = {
