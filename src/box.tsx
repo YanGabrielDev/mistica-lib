@@ -18,6 +18,7 @@ type Props = {
     paddingRight?: ByBreakpoint<PadSize>;
     children?: React.ReactNode;
     className?: string;
+    style?: React.CSSProperties | undefined;
     role?: string;
     /** "data-" prefix is automatically added. For example, use "testid" instead of "data-testid" */
     dataAttributes?: DataAttributes;
@@ -40,6 +41,7 @@ const Box = React.forwardRef<HTMLDivElement, Props>(
             role,
             dataAttributes,
             'aria-label': ariaLabel,
+            style,
         },
         ref
     ) => {
@@ -69,6 +71,7 @@ const Box = React.forwardRef<HTMLDivElement, Props>(
                 style={{
                     ...(width !== undefined ? {width, boxSizing: 'border-box'} : {}),
                     ...(!paddingClasses ? paddingStyles : {}),
+                    ...style,
                 }}
             >
                 {children}

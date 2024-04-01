@@ -982,6 +982,7 @@ interface CommonDisplayCardProps {
     pretitleLinesMax?: number;
     title: string;
     titleLinesMax?: number;
+    children?: JSX.Element;
     description?: string;
     descriptionLinesMax?: number;
     'aria-label'?: string;
@@ -1055,6 +1056,7 @@ const DisplayCard = React.forwardRef<HTMLDivElement, GenericDisplayCardProps>(
             dataAttributes,
             width,
             height,
+            children,
             aspectRatio,
             'aria-label': ariaLabel,
             ...touchableProps
@@ -1130,91 +1132,7 @@ const DisplayCard = React.forwardRef<HTMLDivElement, GenericDisplayCardProps>(
                                     paddingTop: withGradient && !icon && !hasTopActions && !hasVideo ? 0 : 24,
                                 }}
                             >
-                                {icon ? (
-                                    <div
-                                        style={applyCssVars({
-                                            [mediaStyles.vars.mediaBorderRadius]: vars.borderRadii.mediaSmall,
-                                        })}
-                                    >
-                                        <Box paddingBottom={withGradient ? 0 : 40} paddingX={24}>
-                                            {icon}
-                                        </Box>
-                                    </div>
-                                ) : (
-                                    <Box
-                                        paddingBottom={
-                                            hasTopActions || hasVideo ? (withGradient ? 24 : 64) : 0
-                                        }
-                                    />
-                                )}
-                                <Box
-                                    paddingX={24}
-                                    paddingTop={withGradient ? 40 : 0}
-                                    paddingBottom={24}
-                                    className={withGradient ? styles.displayCardGradient : undefined}
-                                >
-                                    <Stack space={24}>
-                                        <div>
-                                            <Stack space={8}>
-                                                {(headline || pretitle || title) && (
-                                                    <header>
-                                                        <Stack space={16}>
-                                                            {headline}
-                                                            <Stack space={4}>
-                                                                {pretitle && (
-                                                                    <Text2
-                                                                        forceMobileSizes
-                                                                        truncate={pretitleLinesMax}
-                                                                        as="div"
-                                                                        regular
-                                                                        textShadow={textShadow}
-                                                                    >
-                                                                        {pretitle}
-                                                                    </Text2>
-                                                                )}
-                                                                <Text6
-                                                                    forceMobileSizes
-                                                                    truncate={titleLinesMax}
-                                                                    as="h3"
-                                                                    textShadow={textShadow}
-                                                                    hyphens="auto"
-                                                                >
-                                                                    {title}
-                                                                </Text6>
-                                                            </Stack>
-                                                        </Stack>
-                                                    </header>
-                                                )}
-
-                                                {description && (
-                                                    <Text3
-                                                        forceMobileSizes
-                                                        truncate={descriptionLinesMax}
-                                                        as="p"
-                                                        regular
-                                                        color={
-                                                            withGradient
-                                                                ? vars.colors.textPrimary
-                                                                : vars.colors.textSecondary
-                                                        }
-                                                        textShadow={textShadow}
-                                                        hyphens="auto"
-                                                    >
-                                                        {description}
-                                                    </Text3>
-                                                )}
-                                            </Stack>
-                                            {extra}
-                                        </div>
-                                        {(button || secondaryButton || buttonLink) && (
-                                            <ButtonGroup
-                                                primaryButton={button}
-                                                secondaryButton={secondaryButton}
-                                                link={buttonLink}
-                                            />
-                                        )}
-                                    </Stack>
-                                </Box>
+                                {children}
                             </div>
                         </div>
                     </BaseTouchable>

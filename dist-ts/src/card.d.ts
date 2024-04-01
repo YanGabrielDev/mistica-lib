@@ -150,6 +150,7 @@ interface CommonDisplayCardProps {
     pretitleLinesMax?: number;
     title: string;
     titleLinesMax?: number;
+    children?: JSX.Element;
     description?: string;
     descriptionLinesMax?: number;
     'aria-label'?: string;
